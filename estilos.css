@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.tooltip .tiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+.tooltip:hover .tiptext {
+    visibility: visible;
+}
+.tooltip.left .tiptext{
+    top: -5px;
+    right: 110%;
+}
+.tooltip.left .tiptext::after{
+    margin-top: -5px;
+    top: 50%;
+    left: 100%;
+    border-color: transparent transparent transparent #2E2E2E;
+}
+
+
+
+
+/* Medios fluidos sencillos
+   Nota: Los medios fluidos exigen la eliminación de los atributos de altura y anchura de los medios del código HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 no admite max-width (anchura máxima), por lo que usa de manera predeterminada una anchura del 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Propiedades de cuadrícula fluida de Dreamweaver
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiración obtenida de "Responsive Web Design" de Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	y Golden Grid System de Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Diseño móvil: 480 px e inferior. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Diseño tableta: de 481 px a 768 px. Hereda estilos de: Diseño móvil. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Diseño escritorio: de 769 px hasta un máximo de 1232 px.  Hereda estilos de: Diseño móvil y Diseño tableta. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+@charset "utf-8";
+.titulos_cajasMB {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color:#003B4C;
+}
+.letra1MB {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+.titulo {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #303;
+}
+.hipervinculo {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #03F;
+}
+.texto {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+.texto_firmas {
+	font-family: 'Roboto', sans-serif;
+	font-size:25px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+.nombreSQMB {
+	font-family: 'Roboto', sans-serif;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color:#003B4C;	
+}
+.precio_vta {
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #06C;	
+}
+
+.caja_mensaje {
+font-family: 'Roboto', sans-serif;
+background-color: # E9E9E9;
+/*background-color: #d9edc2;*/
+border: 2px solid #CCC;
+font-size: 18px;
+height:110px;
+width:330px;
+color:#333;
+border-radius: 8px;
+
+}
+.caja {
+font-family: 'Roboto', sans-serif;
+background-color: # E9E9E9;
+/*background-color: #d9edc2;*/
+border: 2px solid #CCC;
+font-size: 18px;
+height:40px;
+width:260px;
+color:#333;
+border-radius: 8px;
+
+}
+.caja_media {
+font-family: 'Roboto', sans-serif;
+background-color: # E9E9E9;
+/*background-color: #d9edc2;*/
+border: 2px solid #CCC;
+font-size: 14px;
+height:35px;
+width:125px;
+color:#333;
+border-radius: 8px;
+}
+.caja_min {
+font-family: 'Roboto', sans-serif;
+background-color: # E9E9E9;
+/*background-color: #d9edc2;*/
+border: 2px solid #CCC;
+font-size: 14px;
+height:35px;
+width:60px;
+color:#333;
+border-radius: 8px;
+}
+
+
+ .boton{
+    font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+    padding: 22px;
+    font-weight: 400;
+    font-size: 23px;
+    color: #ffffff;
+    background-color: #003B4C;
+    border-radius: 15px;
+    border: 2px solid #003B4C;
+  }
+  .boton:hover{
+    color: #003B4C;
+    background-color: #ffffff;
+  }
+
+
+.tabla_carro{
+border: 1px solid #999;
+border-radius: 5px;
+}
+
+
+
+.headt td {
+  height: 41px;
+}
+
+.firmas {
+	background-image:url('./imagenes/fondo.jpg');
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
